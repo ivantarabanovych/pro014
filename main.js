@@ -1,12 +1,11 @@
-//Напишіть функцію, яка приймає масив чисел і фільтрує лише парні числа. 
-//Використовуйте функцію вищого порядку, таку як filter, для розв'язання цієї задачі.
+//Напишіть функцію, яка приймає масив чисел і використовує функцію вищого порядку,
+//наприклад reduce, для обчислення суми всіх чисел у масиві.
 
-const numbersArray = [1, 2, 7, 9, 10, 12, 15, 16, 17, 20];
+const numbersArray = [1, 2, 3, 4, 5, 6, 7, 8 , 9];
 
-function filterArrayNumbers(numbers){
-    return numbers.filter(number => number % 2 ===0);
+function sumArray(numbers){
+    return numbers.reduce((sum, numbers) => sum + numbers, 0)
 }
 
-const arrayNumbers = filterArrayNumbers(numbersArray);
-console.log(arrayNumbers); // [2, 10, 12, 16, 20] 👍
-
+const sum = sumArray(numbersArray);
+console.log(sum); // 4️⃣5️⃣

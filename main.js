@@ -1,8 +1,19 @@
-function carry(a){
-    return function(b){
-        return a * b;
-    };
-};
+function accumulator() {
+    sum = 0;
 
-const carry17 = carry(17);
-console.log(carry17(17));
+    return function(value){
+        sum += value;
+        return sum;
+    }
+}
+
+const acc = accumulator();
+
+console.log(acc(5));
+console.log(acc(7));
+console.log(acc(12));
+console.log(acc(22));
+console.log(acc(7));
+console.log(acc(7));
+
+

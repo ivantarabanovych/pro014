@@ -1,9 +1,8 @@
-function replacePlace(text, oldPhrase, newPhrase) {
-    const phrase = new RegExp(oldPhrase, 'g'); 
-    return text.replace(phrase, newPhrase);    
-}
+function carry(a){
+    return function(b){
+        return a * b;
+    };
+};
 
-const originalText = "Це тестовий рядок. Тестовий рядок повинен бути змінений.";
-const modifiedText = replacePlace(originalText, "тестовий", "змінений");
-
-console.log(modifiedText);
+const carry17 = carry(17);
+console.log(carry17(17));
